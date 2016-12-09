@@ -1,0 +1,6 @@
+private static String GetExecutionPath(){
+    String absolutePath = getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+    absolutePath = absolutePath.substring(0, absolutePath.lastIndexOf("/"));
+    absolutePath = absolutePath.replaceAll("%20"," "); // Surely need to do this here
+    return absolutePath;
+}
