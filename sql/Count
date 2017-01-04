@@ -1,4 +1,6 @@
-If you want to show the count based on the condition of some specific column's content.
+#COUNT
+
+##If you want to show the count based on the condition of some specific column's content.
 
  SELECT
     c_unit_code,
