@@ -1,0 +1,9 @@
+If you want to show the count based on the condition of some specific column's content.
+
+ SELECT
+    c_unit_code,
+    COUNT(case when YOUR_CONDITIONS_FOR_ADVICE_EXPORT then 1 end) AS ADVICE_EXPORT,
+    COUNT(case when YOUR_CONDITIONS_FOR_CONFIRMATION_EXPORT then 1 end) AS CONFIRMATION_EXPORT,
+    COUNT(case when YOUR_CONDITIONS_FOR_ISSUANCE_STANDBY then 1 end) AS ISSUANCE_STANDBY
+  FROM EXIMTRX.EPLC_MASTER
+  GROUP BY c_unit_code
